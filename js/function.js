@@ -27,8 +27,11 @@ function ret() {
 const anotherNum = ret();
 console.log(anotherNum);
 
+//function declaration используется только после объявления
 const logger = function() {
     console.log("Hello");
 };
 
 logger();
+
+const cal = (a, b) => { return a + b };
