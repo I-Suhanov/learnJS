@@ -51,16 +51,32 @@ const personalMovieDB = {
     writeYourGenres: function() {
         let tmp;
         for(let i = 0; i < 3; i++){
-            tmp = prompt(`Ваш любимый жанр под номером ${i}`, '');
+            tmp = prompt(`Ваш любимый жанр под номером ${i+1}`, '');
             if(tmp != null && tmp != ''){
                 this.genres[i] = tmp;
             } else{
                 i--;
             }
         }
-        this.genres.forEach(function(item, i, arr){
+        this.genres.forEach((item, i) => {
             console.log(`Любимый жанр ${i+1} - это ${item}`);
-        })
+        });
+    },
+    writeYourGenresAlternative: () => {
+        let tmp;
+        for(let i = 0; i < 1; i++){
+            tmp = prompt(`Введите ваши любимые жанры через запятую`, '').toLowerCase();
+            if(tmp != null && tmp != ''){
+                this.genres = tmp.split(', ');
+                this.genres.sort();
+            } else{
+                console.log("Вы ввели некорректные данные или не ввели их вовсе");
+                i--;
+            }
+        }
+        this.genres.forEach((item, i) => {
+            console.log(`Любимый жанр ${i+1} - это ${item}`);
+        });
     },
     toggleVisibleMyDB: function(){
         this.privat = !this.privat;
@@ -68,8 +84,8 @@ const personalMovieDB = {
 };
 
 personalMovieDB.setCount();
-personalMovieDB.rememberMyFilms();
-personalMovieDB.detectPersonalLevel();
-personalMovieDB.writeYourGenres();
+// personalMovieDB.rememberMyFilms();
+// personalMovieDB.detectPersonalLevel();
+// personalMovieDB.writeYourGenres();
 //personalMovieDB.toggleVisibleMyDB();
 personalMovieDB.showMyDB();

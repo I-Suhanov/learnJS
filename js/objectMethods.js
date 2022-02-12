@@ -7,9 +7,13 @@ const options = {
     colors: {
         border: 'black',
         bg: 'red'
+    },
+    makeTest: function() {
+        console.log("Test");
     }
 };
 
+options.makeTest();
 // console.log(options.name);
 
 // delete options.name;
@@ -28,3 +32,8 @@ for (let key in options) {
     counter++;
 }
 console.log(counter);
+
+console.log(Object.keys(options));
+
+const {border, bg} = options.colors;
+console.log(border);

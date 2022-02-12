@@ -23,7 +23,7 @@ const obj = {
     isMarried: false
 };
 
-console.log(obj.name + " " + obj ["age"] );
+console.log(obj.name + " " + obj["age"] );
 
 let arr = [1, 2, 5, 7, 8, 9];
 

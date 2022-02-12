@@ -26,7 +26,7 @@ start();
 rememberMyFilms();
 detectPersonalLevel();
 writeYourGenres();
-showMyDB();
+showMyDB(personalMovieDB.privat);
 
 function rememberMyFilms() {
     for(let i = 0; i < 2; i++){
@@ -58,8 +58,8 @@ function detectPersonalLevel() {
     
 }
 
-function showMyDB() {
-    if(!personalMovieDB.privat){
+function showMyDB(hidden) {
+    if(!hidden){
         console.log(personalMovieDB);
     }
 }

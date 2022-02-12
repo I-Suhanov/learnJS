@@ -1,11 +1,15 @@
 "use strict";
 
- const arr = [3,4,5,1, 2, 3, 4, 5, 8];
+ const arr = [3, 4, 5, 1, 2, 3, 4, 5, 8, 11, 13];
 
 arr.pop();
 arr.push(4);
 
-arr.sort();
+arr.sort(compareNum);
+
+function compareNum(a, b){
+    return a - b;
+}
 
 console.log(arr);
 
