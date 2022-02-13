@@ -11,7 +11,6 @@ const heartAlternative = wrapper.querySelectorAll('.heart');
 console.log(heartAlternative);
 // box.style.backgroundColor = 'green';
 // box.style.width = '500px';
-
 box.style.cssText = 'background-color: green; width: 500px';
 
 btns[2].style.borderRadius = '50%';
